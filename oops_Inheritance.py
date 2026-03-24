@@ -74,6 +74,68 @@ m.homedecors()
 m.electronics()
 m.furnitures()
 m.footware()
+
+'''#multilevel inheritance
+
+class GP:
+    def GPskills(self):
+        print("Drawing")
+
+class P(GP):
+    def Pskills(self):
+        print("Driving")
+
+class C(P):
+    def Cskills(self):
+        print("Cooking")
+
+gp = GP()
+gp.GPskills()
+
+p = P()
+p.GPskills()
+p.Pskills()
+
+c = C()
+c.GPskills()
+c.Pskills()
+c.Cskills()'''
+
+
+class phone:
+    def commonuse(self):
+        print("Communication")
+
+class Type1(phone):
+    def model1(self):
+        print("Button phone")
+
+class Type2(phone):
+    def model2(self):
+        print("Smart phone")
+
+class sim(Type1,Type2):
+    def simcard(self):
+        print("Insert sim card for communication")
+
+p = phone()
+p.commonuse()
+
+t1 = Type1()
+t1.commonuse()
+t1.model1()
+
+
+t2 = Type2()
+t2.commonuse()
+t2.model2()
+
+s = sim()
+s.commonuse()
+s.model1()
+s.model2()
+s.simcard()
+
 m.jewellry()
 
 
